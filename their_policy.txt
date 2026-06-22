@@ -1,0 +1,58 @@
+# Data Protection and IT Security Policy
+## Hope for Children Charity
+
+### 1. Introduction
+Hope for Children is a registered charity (number 123456) providing educational support to disadvantaged children. This policy outlines how we handle personal data and protect our IT systems.
+
+### 2. Data We Collect
+- Names and addresses of donors (approximately 2,000 records)
+- Email addresses for newsletter subscribers (1,500)
+- Phone numbers for event volunteers (200)
+- Bank details for direct debit donors (800)
+- Children's names and school information for programme participants (500)
+
+### 3. How We Use Data
+- Send quarterly newsletters and fundraising appeals
+- Process donations and Gift Aid claims
+- Coordinate volunteer activities
+- Report to funders and the Charity Commission
+
+### 4. Data Storage
+- All records stored on Google Workspace (cloud)
+- Staff access via password-protected laptops
+- No encryption on local devices
+- Backups performed weekly by the Office Manager
+
+### 5. Data Retention
+- Donor records: kept indefinitely for Gift Aid
+- Volunteer records: kept for 2 years after last activity
+- Funder reports: kept for 7 years
+
+### 6. Security Measures
+- Staff use passwords (minimum 8 characters)
+- Two staff members have admin access
+- No formal password policy
+- No multi-factor authentication
+- Laptops are not encrypted
+
+### 7. Data Sharing
+- We share donor data with our mailing house for newsletter distribution
+- We share financial data with our accountant
+- We do not sell data to third parties
+
+### 8. Individual Rights
+- People can email us to unsubscribe from newsletters
+- We respond to data requests within 30 days
+- No formal subject access request procedure
+
+### 9. Breach Response
+- The Office Manager handles any issues
+- No formal breach notification procedure
+- No record of past breaches
+
+### 10. Review
+This policy was last reviewed in January 2024.
+Next review scheduled for January 2025.
+
+Signed: Sarah Johnson, Chair of Trustees
+Date: 15 January 2024

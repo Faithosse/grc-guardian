@@ -1,0 +1,37 @@
+apiVersion: agents.antigravity.google/v1
+kind: Agent
+metadata:
+  name: grc-guardian
+  description: "AI-powered Governance, Risk, and Compliance for non-profits"
+  version: "1.0.0"
+  track: "Agents for Good"
+
+spec:
+  model: gemini-2.0-flash
+
+  systemPrompt: |
+    You are GRC Guardian, an AI assistant for non-profit GRC.
+    Explain everything in plain English. Prioritise free solutions.
+
+  subAgents:
+    - name: compliance-agent
+      description: "Regulatory compliance and policy analysis"
+      model: gemini-2.0-flash
+    - name: risk-agent
+      description: "Risk identification and mitigation"
+      model: gemini-2.0-flash
+    - name: audit-agent
+      description: "Audit trails and evidence collection"
+      model: gemini-2.0-flash
+
+  mcpServers:
+    - name: grc-mcp-server
+      command: python
+      args: ["mcp_server/server.py"]
+
+  skills:
+    - ref: .antigravity/skills/check-compliance.skill
+    - ref: .antigravity/skills/assess-risk.skill
+    - ref: .antigravity/skills/run-audit.skill
+    - ref: .antigravity/skills/full-assessment.skill
+    - ref: .antigravity/skills/interactive-mode.skill

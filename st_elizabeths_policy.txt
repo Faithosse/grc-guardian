@@ -1,0 +1,103 @@
+# Data Protection Policy
+## St Elizabeth's Centre
+
+### 1. Background
+St Elizabeth's Centre ("the Charity") is committed to the highest level of data protection. The Charity will follow the relevant Law taking into account any relevant guidance.
+
+"Law" means the UK General Data Protection Regulation (GDPR), Data Protection Act 2018, the Data Protection (Charges and Information) Regulations 2018 and the Privacy and Electronic Communications Regulations 2003, as amended from time to time.
+
+"Guidance" means any guidance issued by the Information Commissioner's Office.
+
+### 2. Scope
+This policy applies to any information which is 'personal data' as defined in article 4 of the GDPR; broadly this means information about a natural person who can be identified directly or indirectly.
+
+### 3. Definitions
+- "Data controller" means the natural or legal person or organization which determines the purposes and means of processing personal data.
+- "Data processor" means a natural or legal person or organization which processes personal data on behalf of a data controller.
+- "Personal data" means any information relating to an identified or identifiable natural person.
+- "Special Category Data" includes personal data revealing racial or ethnic origin, political opinions, religious beliefs, trade union membership, genetic data, biometric data, health data, or sex life.
+
+### 4. Organisational Responsibilities
+4.1. The Charity has the ultimate responsibility for compliance with data protection law. In practice, this means that it is the responsibility of the Trustees of the Charity.
+4.2. The Trustees have delegated the responsibility for implementing this policy and monitoring compliance to the Data Protection Officer and Executive Team.
+4.3. We will monitor the effectiveness of this and all of our policies and procedures and conduct a full review and update as appropriate.
+4.4. The Data Protection Officer is responsible for overseeing this policy and developing data-related policies and guidelines.
+4.5. The Data Protection Officer must be consulted in cases of uncertainty about lawful basis, consent, retention periods, privacy notices, subject access requests, personal data breaches, security measures, third-party sharing, international transfers, new processing activities, or automated decision-making.
+
+Data Protection Officer: Mike Bibby
+Email: DPO@stelizabeths.org.uk
+Telephone: 01279844361
+
+### 5. Data Protection Principles
+All personal data shall be:
+a) processed lawfully, fairly and in a transparent manner;
+b) collected for specific explicit and legitimate purposes;
+c) adequate, relevant and limited to what is necessary;
+d) accurate and where necessary, kept up to date;
+e) kept in a form which permits identification of individuals for no longer than necessary;
+f) processed in a manner that ensures appropriate security.
+
+### 6. Staff Responsibilities
+All staff including volunteers are expected to ensure compliance with the law by following all relevant policies and procedures:
+a) Make sure that any personal data held is accurate and up to date.
+b) Follow the Charity's Records Retention Policy and do not keep personal data longer than necessary.
+c) Make sure you store personal data carefully. Do not leave it unsecured, whether at work, when working at home or when travelling.
+d) Be careful when you send personal data outside St Elizabeth's. Make sure that you are allowed to do so and protect it during transit.
+e) Inside the Charity, only share personal data on a 'need to know' basis.
+f) Respect the rights of individuals by actioning any individual requests.
+g) Be very careful about making a new collection of personal data or using existing data for a new purpose. The Data Protection Officer must be consulted.
+
+### 7. The Personal Data which the Charity Holds
+7.1. Those who work for St Elizabeth's: Employees, Agency Staff, Volunteers
+7.2. Service Users: Residents in the Children's Home, Supported Living, Pupils attending the School, Students attending the College, Those attending Day Opportunities
+7.3. Other contacts: Contractors, Employees of other organisations, Parents/guardians/representatives, Emergency contacts
+
+The personal data includes a large amount of Special Category Data (sensitive information), in particular information relating to health.
+
+### 8. Disclosure of Personal Data
+8.1. No disclosure of personal data will be made unless the disclosure is permitted by law.
+8.2. Personal data should only be shared with other members of staff or teams on a 'need to know basis'.
+8.3. Data must not be shared routinely unless it is covered by existing documented data sharing arrangements.
+
+### 9. Data Processing Arrangements
+9.1. The Charity uses a number of data processors. There must by law be a written data processing agreement in place for every data processing arrangement.
+9.2. Before engaging any processor, the Charity will carry out a full due diligence process.
+
+### 10. New Collection or Use of Personal Data
+If a member of staff intends to collect additional personal data or to deploy existing personal data for a new purpose, they must consult with both their Head of Service and the Data Protection Officer.
+
+### 11. Retention Policy
+The Charity only retains personal data for as long as it needs it. For further details, please see the Records Retention Policy.
+
+### 12. Individual Rights
+Individuals have the right to:
+a) Access their personal data
+b) Rectification of inaccurate data
+c) Erasure (right to be forgotten)
+d) Object to processing
+e) Data portability
+f) Withdraw consent
+
+### 13. Handling of Individual Rights Requests
+13.1. When someone contacts the Charity to make an individual rights request, the request shall be referred to the Data Protection Officer immediately.
+13.2. The Data Protection Officer will confirm the identity of the person making the request before disclosing any personal data.
+13.3. There is no charge for individual rights requests except where manifestly unfounded or excessive.
+
+### 14. Personal Data Breach
+14.1. Personal Data Breach is defined as 'a breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to, personal data'.
+14.2. If any member of staff knows or suspects a personal data breach has occurred, they should immediately report it to the Head of Service using the data breach report form.
+14.3. The Head of Service or Data Protection Officer will notify the ICO when a personal data breach has occurred which is likely to result in a risk to the rights and freedoms of individuals. This will be done without undue delay and, where possible, within 72 hours.
+14.4. Where the data breach is likely to result in a high risk, the individual(s) must also be notified.
+14.5. Following a breach, the Data Protection Officer will log the breach. This record must comprise the facts relating to the personal data breach, its effects and remedial action taken.
+
+### 15. Complaints from Individuals
+15.1. If at any time you have a complaint about what we do with your personal data, then you can complain to the Charity.
+15.2. Alternatively, you can complain directly to the Information Commissioner's Office.
+
+### 16. Policy Review
+This policy will be reviewed routinely every two years but may be reviewed more frequently if required in response to events.
+
+Signed: Trustees of St Elizabeth's Centre
+Date: 2024
+Last reviewed: 2024
+Next review: 2026

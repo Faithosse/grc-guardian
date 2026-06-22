@@ -1,0 +1,30 @@
+apiVersion: skills.antigravity.google/v1
+kind: Skill
+metadata:
+  name: assess-risk
+  description: "Generate risk register with scoring"
+  agent: grc-guardian
+
+spec:
+  parameters:
+    - name: org_type
+      type: string
+      enum: [charity, social_enterprise]
+      default: charity
+    - name: budget
+      type: string
+      enum: [zero, low, medium]
+      default: low
+  steps:
+    - name: get-risks
+      action: mcp
+      server: grc-mcp-server
+      tool: get_risk_register
+      arguments:
+        organisation_type: "{{org_type}}"
+    - name: score-and-mitigate
+      action: llm
+      prompt: |
+        Score and mitigate risks for {{org_type}} with {{budget}} budget.
+        Risks: {{steps.get-risks.result}}
+        Use calculate_risk_score and suggest_mitigation tools.

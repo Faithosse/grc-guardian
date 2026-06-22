@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-06-22T12:00:58.761859",
+  "organisation_type": "charity",
+  "policy_analysed": false,
+  "policy_file": null,
+  "compliance": {
+    "framework": "GDPR",
+    "score": 0,
+    "gaps": 0
+  },
+  "risk": {
+    "total": 5,
+    "high": 5,
+    "policy_specific": 0
+  },
+  "audit": {
+    "entry_hash": "efb47a448eb585e15033458ae65def4f9cc8a23df173ad0745bc76fd3092e2b6"
+  },
+  "sequence": 2
+}

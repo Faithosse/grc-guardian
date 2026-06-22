@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "grc-mcp-server": {
+      "command": "python",
+      "args": ["mcp_server/server.py"],
+      "env": {
+        "MCP_LOG_LEVEL": "info",
+        "PYTHONPATH": "."
+      },
+      "description": "GRC Guardian MCP server with 9 tools"
+    }
+  }
+}

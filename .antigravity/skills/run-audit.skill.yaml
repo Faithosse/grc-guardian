@@ -1,0 +1,24 @@
+apiVersion: skills.antigravity.google/v1
+kind: Skill
+metadata:
+  name: run-audit
+  description: "Execute audit with evidence and integrity checks"
+  agent: grc-guardian
+
+spec:
+  parameters:
+    - name: audit_type
+      type: string
+      enum: [financial, compliance, it_security, general]
+      default: general
+    - name: schedule
+      type: boolean
+      default: false
+  steps:
+    - name: create-evidence
+      action: mcp
+      server: grc-mcp-server
+      tool: create_audit_entry
+      arguments:
+        actor: "audit-agent"
+        action:

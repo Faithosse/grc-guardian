@@ -1,0 +1,29 @@
+apiVersion: skills.antigravity.google/v1
+kind: Skill
+metadata:
+  name: check-compliance
+  description: "Check compliance against a regulatory framework"
+  agent: grc-guardian
+
+spec:
+  parameters:
+    - name: framework
+      type: string
+      enum: [GDPR, NIST_CSF, ISO27001, CHARITY_COMMISSION]
+      default: GDPR
+    - name: query
+      type: string
+      required: true
+  steps:
+    - name: fetch-regulation
+      action: mcp
+      server: grc-mcp-server
+      tool: fetch_regulation
+      arguments:
+        regulation_name: "{{framework}}"
+    - name: analyse
+      action: llm
+      prompt: |
+        Analyse compliance for: {{query}}
+        Regulation: {{steps.fetch-regulation.result}}
+        Provide gaps, actions, and confidence level.

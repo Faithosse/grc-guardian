@@ -1,0 +1,20 @@
+{
+  "organisation": "Demo Charity",
+  "last_updated": "2024-01-15",
+  "risks": [
+    {
+      "id": "R001",
+      "description": "Cyber breach losing donor database",
+      "likelihood": 3,
+      "impact": 5,
+      "owner": "IT Manager"
+    },
+    {
+      "id": "R002",
+      "description": "Key trustee departure",
+      "likelihood": 4,
+      "impact": 4,
+      "owner": "Chair"
+    }
+  ]
+}

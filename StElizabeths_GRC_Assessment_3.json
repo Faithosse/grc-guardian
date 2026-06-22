@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-06-22T11:46:15.721843",
+  "organisation_type": "charity",
+  "policy_analysed": true,
+  "policy_file": "st_elizabeths_policy.txt",
+  "compliance": {
+    "framework": "GDPR",
+    "score": 85,
+    "gaps": 1
+  },
+  "risk": {
+    "total": 10,
+    "high": 9,
+    "policy_specific": 5
+  },
+  "audit": {
+    "entry_hash": "4368dda30b1575e546b5da5b1928f1acdba470189c904f6bece2cbdce231f6b7"
+  },
+  "sequence": 3
+}
