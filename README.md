@@ -1,15 +1,27 @@
-GRC Guardian
-Agents for Good | Kaggle 5-Day AI Agents Capstone
-AI-powered Governance, Risk, and Compliance for non-profits with limited resources.
-Problem
-Non-profits face identical regulatory pressures to corporations—GDPR, safeguarding, financial audit—yet 68% of small charities have no formal risk process. Dedicated GRC staff are unaffordable.
-Solution
-GRC Guardian is a multi-agent system using Google ADK that provides:
-Compliance checks against GDPR, NIST CSF, ISO 27001, Charity Commission rules
-Risk assessment with quantitative scoring and budget-constrained mitigations
-Tamper-evident audit trails with SHA-256 hashing for funder review
-Architecture
-plain
+# GRC Guardian
+
+**Agents for Good | Kaggle 5-Day AI Agents Capstone**
+
+> AI-powered Governance, Risk, and Compliance for non-profits with limited resources.
+
+---
+
+## Problem
+
+Non-profits face identical regulatory pressures to corporations---GDPR, safeguarding, financial audit---yet **68% of small charities have no formal risk process**. Dedicated GRC staff are unaffordable.
+
+## Solution
+
+GRC Guardian is a multi-agent system using **Google ADK** that provides:
+
+- **Compliance checks** against GDPR, NIST CSF, ISO 27001, Charity Commission rules
+- **Risk assessment** with quantitative scoring and budget-constrained mitigations
+- **Tamper-evident audit trails** with SHA-256 hashing for funder review
+
+---
+
+## Architecture
+
 +-------------------------------------------------------------+
 |                     GRC Guardian                            |
 +-------------------------------------------------------------+
@@ -35,50 +47,55 @@ plain
 |                    +---------------------+                  |
 |                                                             |
 +-------------------------------------------------------------+
-                              |
-                    +---------v---------+
-                    |  CLI / Skills     |
-                    |  5 Click commands |
-                    +-------------------+
-Key Concepts Demonstrated
-Table
-Concept	Where	Evidence
-ADK Multi-Agent	agents/*.py	4 agents: Orchestrator, Compliance, Risk, Audit
-MCP Server	mcp_server/server.py	9 tools via stdio transport
-Antigravity	.antigravity/	Agent manifest, skills, deploy config
-Security	agents/audit_agent.py	SHA-256 tamper-evident trails
-Deployability	Dockerfile, health_server.py	Container + K8s ready
-Agent Skills/CLI	cli/main.py	5 Click commands
-Installation
-Step 1: Clone or Extract Project
-bash
+|
++---------v---------+
+|  CLI / Skills     |
+|  5 Click commands |
++-------------------+
+
+
+
+---
+
+## Key Concepts Demonstrated
+
+| Concept | Where | Evidence |
+|---------|-------|----------|
+| **ADK Multi-Agent** | `agents/*.py` | 4 agents: Orchestrator, Compliance, Risk, Audit |
+| **MCP Server** | `mcp_server/server.py` | 9 tools via stdio transport |
+| **Antigravity** | `.antigravity/` | Agent manifest, skills, deploy config |
+| **Security** | `agents/audit_agent.py` | SHA-256 tamper-evident trails |
+| **Deployability** | `Dockerfile`, `health_server.py` | Container + K8s ready |
+| **Agent Skills/CLI** | `cli/main.py` | 5 Click commands |
+
+---
+
+## Installation
+
+### Step 1: Clone or Extract Project
+
+```bash
 cd grc-guardian
-Step 2: Create Virtual Environment
-bash
-python -m venv venv
-Step 3: Activate Virtual Environment
-Windows:
-bash
+
+---
+### Step 2: Create Virtual Environment
+python -m venv venv 
+
+### Step 3: Activate Virtual Environment
 venv\Scripts\activate
-Mac/Linux:
-bash
-source venv/bin/activate
-Step 4: Install Dependencies
-bash
+
+### Step 4: Install Dependencies
 pip install -r requirements.txt
-Step 5: Configure Environment
-bash
-cp .env.example .env
-Edit .env with your API keys:
-bash
+
+### Step 5: Configure Environment
 GOOGLE_API_KEY=your_google_api_key_here
-Project Structure
-plain
+
+### Project Structure
 grc-guardian/
 ├── agents/                    # ADK Multi-Agent System
 │   ├── __init__.py
 │   ├── orchestrator.py        # Intent routing + synthesis
-│   ├── compliance_agent.py  # GDPR, NIST, ISO checks
+│   ├── compliance_agent.py    # GDPR, NIST, ISO checks
 │   ├── risk_agent.py          # Risk scoring + mitigations
 │   └── audit_agent.py         # SHA-256 audit trails
 ├── mcp_server/                # Model Context Protocol
@@ -100,7 +117,8 @@ grc-guardian/
 ├── .env.example               # Config template
 ├── .gitignore
 └── README.md                  # This file
-Running the Project
+
+### Running the Project
 1. Run the Demo (All Agents)
 bash
 python demo.py
@@ -174,8 +192,8 @@ bash
 docker-compose up
 MCP Configuration
 The mcp_config.json file configures two MCP servers:
-GRC MCP Server — local Python server with 9 GRC tools
-Google Search — live web search for current regulations
+GRC MCP Server --- local Python server with 9 GRC tools
+Google Search --- live web search for current regulations
 To use with Claude Desktop or other MCP clients, copy mcp_config.json to your MCP config directory.
 Environment Variables
 Table
@@ -200,6 +218,34 @@ python cli/main.py full-assessment -t charity -o report.json
 python test_mcp_client.py             # Test all MCP tools
 python health_server.py                 # Start health endpoint
 Track
-Agents for Good — democratising GRC for resource-constrained non-profits.
+Agents for Good --- democratising GRC for resource-constrained non-profits.
 License
 MIT License
+plain
+
+---
+
+**How to save it:**
+
+1. Copy everything between the `---` lines (the markdown code block)
+2. Open Notepad
+3. Paste
+4. **File → Save As**
+5. Navigate to `C:\Users\faith\OneDrive\grc-guardian`
+6. File name: `README.md`
+7. Save as type: `All Files (*.*)`
+8. Encoding: `UTF-8`
+9. Click **Save**
+
+Then push:
+```powershell
+cd "C:\Users\faith\OneDrive\grc-guardian"
+git add README.md
+git commit -m "Update README with proper GitHub markdown"
+git push
+
+
+
+
+
+
