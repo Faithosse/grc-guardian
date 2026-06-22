@@ -1,6 +1,7 @@
+
 # GRC Guardian
 
-**Agents for Good | Kaggle 5-Day AI Agents Capstone**
+**Agents for Good**
 
 > AI-powered Governance, Risk, and Compliance for non-profits with limited resources.
 
@@ -22,6 +23,7 @@ GRC Guardian is a multi-agent system using **Google ADK** that provides:
 
 ## Architecture
 
+```
 +-------------------------------------------------------------+
 |                     GRC Guardian                            |
 +-------------------------------------------------------------+
@@ -47,13 +49,12 @@ GRC Guardian is a multi-agent system using **Google ADK** that provides:
 |                    +---------------------+                  |
 |                                                             |
 +-------------------------------------------------------------+
-|
-+---------v---------+
-|  CLI / Skills     |
-|  5 Click commands |
-+-------------------+
-
-
+                              |
+                    +---------v---------+
+                    |  CLI / Skills     |
+                    |  5 Click commands |
+                    +-------------------+
+```
 
 ---
 
@@ -76,21 +77,48 @@ GRC Guardian is a multi-agent system using **Google ADK** that provides:
 
 ```bash
 cd grc-guardian
+```
 
 ### Step 2: Create Virtual Environment
-python -m venv venv 
----
+
+```bash
+python -m venv venv
+```
 
 ### Step 3: Activate Virtual Environment
+
+**Windows:**
+```bash
 venv\Scripts\activate
+```
+
+**Mac/Linux:**
+```bash
+source venv/bin/activate
+```
 
 ### Step 4: Install Dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
 ### Step 5: Configure Environment
-GOOGLE_API_KEY=your_google_api_key_here
 
-### Project Structure
+```bash
+cp .env.example .env
+```
+
+Edit `.env` with your API keys:
+```bash
+GOOGLE_API_KEY=your_google_api_key_here
+```
+
+---
+
+## Project Structure
+
+```
 grc-guardian/
 ├── agents/                    # ADK Multi-Agent System
 │   ├── __init__.py
@@ -117,31 +145,44 @@ grc-guardian/
 ├── .env.example               # Config template
 ├── .gitignore
 └── README.md                  # This file
+```
 
-### Running the Project
-1. Run the Demo (All Agents)
-bash
+---
+
+## Running the Project
+
+### 1. Run the Demo (All Agents)
+
+```bash
 python demo.py
+```
+
 This runs all 4 demos sequentially:
-Demo 1: Compliance Check (GDPR)
-Demo 2: Risk Assessment (Charity, Low Budget)
-Demo 3: Audit Trail (Financial)
-Demo 4: MCP Server Tools Integration
-2. Run the MCP Server (Separate Terminal)
-bash
+- **Demo 1:** Compliance Check (GDPR)
+- **Demo 2:** Risk Assessment (Charity, Low Budget)
+- **Demo 3:** Audit Trail (Financial)
+- **Demo 4:** MCP Server Tools Integration
+
+### 2. Run the MCP Server (Separate Terminal)
+
+```bash
 python mcp_server/server.py
+```
+
 The MCP server runs continuously and exposes 9 tools via stdio transport:
-fetch_regulation
-analyse_policy
-calculate_risk_score
-get_risk_register
-create_audit_entry
-verify_audit_integrity
-generate_audit_schedule
-suggest_mitigation
-check_framework_alignment
-3. Run the CLI / Agent Skills
-bash
+- `fetch_regulation`
+- `analyse_policy`
+- `calculate_risk_score`
+- `get_risk_register`
+- `create_audit_entry`
+- `verify_audit_integrity`
+- `generate_audit_schedule`
+- `suggest_mitigation`
+- `check_framework_alignment`
+
+### 3. Run the CLI / Agent Skills
+
+```bash
 # Check compliance against a framework
 python cli/main.py check-compliance -f GDPR -q "We collect donor emails"
 
@@ -156,67 +197,125 @@ python cli/main.py full-assessment -t charity -o report.json
 
 # Interactive mode
 python cli/main.py interactive
-4. Run the Health Check Server
-bash
+```
+
+### 4. Run the Health Check Server
+
+```bash
 python health_server.py
+```
+
 Test the health endpoint:
-bash
+```bash
 curl http://localhost:8080/health
-5. Fetch a Real-World Policy
-bash
+```
+
+### 5. Fetch a Real-World Policy
+
+```bash
 python fetch_policy.py
-This downloads St Elizabeth's data protection policy. Note: it saves as PDF but uses the local .txt copy for analysis.
-6. Run the Tests
-bash
+```
+
+This downloads St Elizabeth's data protection policy. Note: it saves as PDF but uses the local `.txt` copy for analysis.
+
+### 6. Run the Tests
+
+```bash
 python tests/test_grc_guardian.py
-7. Test the MCP Client
-bash
+```
+
+### 7. Test the MCP Client
+
+```bash
 python test_mcp_client.py
+```
+
 This connects to the MCP server via stdio and tests all 9 tools end-to-end.
 
-Sample Data Files
-Table
-File	Description
-st_elizabeths_policy.txt	Real charity data protection policy (St Elizabeth's Centre)
-their_policy.txt	Sample charity policy (Hope for Children) with known gaps
-sample_policy.md	Example policy for testing
-sample_risk_register.json	Pre-built risk register template
+---
 
-Docker Deployment
+## Real-World Test Commands
 
-Build the Image
-bash
+Using the actual policy documents included in the repo:
+
+```bash
+cd C:\Users\faith\OneDrive\grc-guardian
+
+# Risk assessment with real policy document
+py cli/main.py assess-risk -t charity -b low -p "st_elizabeths_policy.txt"
+
+# Audit with actual policy gaps
+py cli/main.py run-audit -t compliance --schedule -p "st_elizabeths_policy.txt"
+
+# Full assessment output to JSON
+py cli/main.py full-assessment -t charity -o "StElizabeths_GRC_Assessment.json" -p "st_elizabeths_policy.txt"
+```
+
+---
+
+## Sample Data Files
+
+| File | Description |
+|------|-------------|
+| `st_elizabeths_policy.txt` | Real charity data protection policy (St Elizabeth's Centre) |
+| `their_policy.txt` | Sample charity policy (Hope for Children) with known gaps |
+| `sample_policy.md` | Example policy for testing |
+| `sample_risk_register.json` | Pre-built risk register template |
+
+---
+
+## Docker Deployment
+
+### Build the Image
+
+```bash
 docker build -t grc-guardian .
+```
 
-Run the Container
-bash
+### Run the Container
+
+```bash
 docker run -p 8080:8080 --env-file .env grc-guardian
-Docker Compose (Optional)
-bash
+```
+
+### Docker Compose (Optional)
+
+```bash
 docker-compose up
-MCP Configuration
-The mcp_config.json file configures two MCP servers:
-GRC MCP Server --- local Python server with 9 GRC tools
-Google Search --- live web search for current regulations
-To use with Claude Desktop or other MCP clients, copy mcp_config.json to your MCP config directory.
-Environment Variables
-Table
+```
 
-Variable	Required	Description
+---
 
-GOOGLE_API_KEY	Yes	Google AI API key for ADK agents
-MCP_LOG_LEVEL	No	MCP server log level (default: info)
-PYTHONPATH	No	Set to . for local imports
-PORT	No	Health server port (default: 8080)
-Quick Start Commands
-bash
+## MCP Configuration
 
+The `mcp_config.json` file configures two MCP servers:
+
+1. **GRC MCP Server** --- local Python server with 9 GRC tools
+2. **Google Search** --- live web search for current regulations
+
+To use with Claude Desktop or other MCP clients, copy `mcp_config.json` to your MCP config directory.
+
+---
+
+## Environment Variables
+
+| Variable | Required | Description |
+|----------|----------|-------------|
+| `GOOGLE_API_KEY` | Yes | Google AI API key for ADK agents |
+| `MCP_LOG_LEVEL` | No | MCP server log level (default: `info`) |
+| `PYTHONPATH` | No | Set to `.` for local imports |
+| `PORT` | No | Health server port (default: `8080`) |
+
+---
+
+## Quick Start Commands
+
+```bash
 # Full setup from scratch
 python -m venv venv
 source venv/bin/activate  # or venv\Scripts\activate on Windows
 pip install -r requirements.txt
 cp .env.example .env
-
 # Edit .env with your GOOGLE_API_KEY
 
 # Run everything
@@ -225,13 +324,35 @@ python mcp_server/server.py             # Start MCP server (terminal 2)
 python cli/main.py full-assessment -t charity -o report.json
 python test_mcp_client.py             # Test all MCP tools
 python health_server.py                 # Start health endpoint
-Track
-Agents for Good --- democratising GRC for resource-constrained non-profits.
-License
-MIT License
-plain
+
+### Run Assessment Against Real Policy
+
+cd C:\Users\faith\OneDrive\grc-guardian
+
+# 1. Compliance check against real charity policy
+py cli/main.py check-compliance -f GDPR -q "Review St Elizabeth's data protection policy" -p "st_elizabeths_policy.txt"
+
+# 2. Risk assessment using real policy context
+py cli/main.py assess-risk -t charity -b low -p "st_elizabeths_policy.txt"
+
+# 3. Audit against real policy
+py cli/main.py run-audit -t compliance --schedule -p "st_elizabeths_policy.txt"
+
+# 4. Full assessment with rolling log
+py cli/main.py full-assessment -t charity -o "StElizabeths_GRC_Assessment.json" -p "st_elizabeths_policy.txt"
+```
 
 ---
+
+## Track
+
+**Agents for Good** --- democratising GRC for resource-constrained non-profits.
+
+## License
+---
+
+
+```
 
 
 
