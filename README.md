@@ -173,6 +173,7 @@ python tests/test_grc_guardian.py
 bash
 python test_mcp_client.py
 This connects to the MCP server via stdio and tests all 9 tools end-to-end.
+
 Sample Data Files
 Table
 File	Description
@@ -180,10 +181,13 @@ st_elizabeths_policy.txt	Real charity data protection policy (St Elizabeth's Cen
 their_policy.txt	Sample charity policy (Hope for Children) with known gaps
 sample_policy.md	Example policy for testing
 sample_risk_register.json	Pre-built risk register template
+
 Docker Deployment
+
 Build the Image
 bash
 docker build -t grc-guardian .
+
 Run the Container
 bash
 docker run -p 8080:8080 --env-file .env grc-guardian
@@ -197,18 +201,22 @@ Google Search --- live web search for current regulations
 To use with Claude Desktop or other MCP clients, copy mcp_config.json to your MCP config directory.
 Environment Variables
 Table
+
 Variable	Required	Description
+
 GOOGLE_API_KEY	Yes	Google AI API key for ADK agents
 MCP_LOG_LEVEL	No	MCP server log level (default: info)
 PYTHONPATH	No	Set to . for local imports
 PORT	No	Health server port (default: 8080)
 Quick Start Commands
 bash
+
 # Full setup from scratch
 python -m venv venv
 source venv/bin/activate  # or venv\Scripts\activate on Windows
 pip install -r requirements.txt
 cp .env.example .env
+
 # Edit .env with your GOOGLE_API_KEY
 
 # Run everything
@@ -224,27 +232,6 @@ MIT License
 plain
 
 ---
-
-**How to save it:**
-
-1. Copy everything between the `---` lines (the markdown code block)
-2. Open Notepad
-3. Paste
-4. **File → Save As**
-5. Navigate to `C:\Users\faith\OneDrive\grc-guardian`
-6. File name: `README.md`
-7. Save as type: `All Files (*.*)`
-8. Encoding: `UTF-8`
-9. Click **Save**
-
-Then push:
-```powershell
-cd "C:\Users\faith\OneDrive\grc-guardian"
-git add README.md
-git commit -m "Update README with proper GitHub markdown"
-git push
-
-
 
 
 
