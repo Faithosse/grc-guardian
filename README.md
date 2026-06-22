@@ -77,9 +77,9 @@ GRC Guardian is a multi-agent system using **Google ADK** that provides:
 ```bash
 cd grc-guardian
 
----
 ### Step 2: Create Virtual Environment
 python -m venv venv 
+---
 
 ### Step 3: Activate Virtual Environment
 venv\Scripts\activate
